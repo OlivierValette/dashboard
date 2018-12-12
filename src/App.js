@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Dashboard, Widget} from 'react-realtime-dashboard';
 import './App.css';
+import animatecss from 'animate.css';
+import Color from "./widgets/Color";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Dashboard row={4} col={3} gutter={10} animationClassIn='animated flipInX' animationClassOut='animated flipOutX'>
+        <Widget size='large'>
+          <Color colors={['red', 'blue', 'green', 'orange']}/>
+        </Widget>
+      </Dashboard>
     );
   }
 }
