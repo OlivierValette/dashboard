@@ -2,20 +2,15 @@
     align-items: center;
     border-radius: 2px;
     color: white;
-    display: flex;
-    font-size: 30px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
     height: 100%;
     justify-content: center;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
     width: 100%;
 }
-
-.item .count {
-    font-size: 14px;
-    font-weight: 600;
-}
-
 .item.facebook { background:#3a5795; }
 .item.instagram { background:#517fa4; }
 .item.youtube { background:#b31217; }

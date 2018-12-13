@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '@fortawesome/fontawesome-free/css/brands.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './Counters.css';
 
 class Counters extends Component {
@@ -45,7 +45,12 @@ class Counters extends Component {
     */
         return (
             <div className={"item " + this.state.socialMedium.name}>
-                <i className={"fab " + this.state.socialMedium.logo + " fa-2x"}></i>
+                <span className="count">
+                    Follow us on {this.state.socialMedium.name}
+                </span>
+                <p className="">
+                    <i className={"fab " + this.state.socialMedium.logo + " fa-3x"}></i>
+                </p>
                 <span className="count">
                     {this.state.socialMedium.user}
                 </span>
