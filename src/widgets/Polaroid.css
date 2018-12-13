@@ -1,0 +1,44 @@
+.instant-photo {
+    width: 300px;
+    height: 375px;
+    padding-top: 10px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 20px gray;
+    background: linear-gradient(to right,
+    transparent, white, white, transparent),
+    repeating-linear-gradient(
+            30deg,
+            rgba(100,100,100,0.1),
+            rgba(100,100,100,0.1) 5px,
+            rgba(0,0,0,0.05) 5px,
+            #fff 6px
+    ), repeating-linear-gradient(
+            150deg,
+            transparent,
+            transparent 5px,
+            rgba(0,0,0,0.05) 5px,
+            #fff 6px
+    );
+}
+
+.instant-photo__content {
+    margin: 0 auto;
+    width: 280px;
+    position: relative;
+}
+
+.instant-photo__image {
+    width: 100%;
+    filter: contrast(50%) blur(0.3px) saturate(70%) sepia(5%) brightness(80%);
+}
+
+.instant-photo__content::after
+{
+    box-shadow: inset -3px -3px 20px 0 #000000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

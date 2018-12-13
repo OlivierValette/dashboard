@@ -24,7 +24,7 @@ class Counters extends Component {
                     socialMedium: this.props.socialMedia[index],
                 })
             })
-        }, 2000);
+        }, 5000);
 
         // Update counters every minute
         this.counterTimer = setInterval(() => {
