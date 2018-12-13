@@ -11,7 +11,7 @@ class DogWidget extends Component {
 
     componentDidMount() {
         this.loadDog(this.api_url);
-        var reload_frequency = 10;
+        var reload_frequency = 15;
         if (this.props.reload_frequency != null) {
             reload_frequency = this.props.reload_frequency;
         }
