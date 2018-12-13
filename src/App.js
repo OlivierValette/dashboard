@@ -89,7 +89,7 @@ class App extends Component {
                                     ]}
             />
         </Widget>
-          <Widget size={'big'}>
+          <Widget size={'tall'}>
               <Polaroid photo={[
                 "https://c1.staticflickr.com/8/7678/17053428732_3d0a23ecc1_b.jpg",
                 "https://i.pinimg.com/736x/d0/f0/fd/d0f0fd559abaed4189e54965c85b428f--toy-camera-pinhole-camera.jpg",

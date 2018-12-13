@@ -1,8 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .instant-photo {
-    width: 300px;
-    height: 375px;
+    width: 200px;
+    height: 260px;
     padding-top: 10px;
-    margin-left: 20px;
     box-shadow: 2px 2px 20px gray;
     background: linear-gradient(to right,
     transparent, white, white, transparent),
@@ -23,13 +29,13 @@
 
 .instant-photo__content {
     margin: 0 auto;
-    width: 280px;
+    width: 170px;
     position: relative;
 }
 
 .instant-photo__image {
     width: 100%;
-    filter: contrast(50%) blur(0.3px) saturate(70%) sepia(5%) brightness(80%);
+    filter: contrast(80%) blur(0.2px) saturate(60%) sepia(3%) brightness(95%);
 }
 
 .instant-photo__content::after
@@ -41,4 +47,12 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.instant-photo p {
+    color: #FF875B;
+    font-size: 36px;
+    position: relative;
+    font-family:fantasy;
+    top: 20px;
 }

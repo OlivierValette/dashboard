@@ -7,7 +7,7 @@ class Polaroid extends Component {
         super(props);
         this.state = {
             index: 0,
-            polaroid: '',
+            polaroid: 'http://i0.wp.com/www.connexion-y.fr/wp-content/uploads/2015/10/logo-Digital-CAMPUS.png?fit=300%2C300',
             }
     }
 
@@ -30,10 +30,14 @@ class Polaroid extends Component {
     render() {
 
         return (
-            <div className="instant-photo">
-                <div className="instant-photo__content">
-                    <img className="instant-photo__image"
-                         src={this.state.polaroid}/>
+            <div className="container">
+                <div className="instant-photo">
+                    <div className="instant-photo__content">
+                        <img className="instant-photo__image"
+                             src={this.state.polaroid}
+                             />
+                    </div>
+                    <p>WE ARE DC</p>
                 </div>
             </div>
         );
