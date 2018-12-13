@@ -20,7 +20,7 @@ class Polaroid extends Component {
                     polaroid: this.props.photo[index],
                 })
             })
-        }, 3000);
+        }, 4000);
     }
 
     componentWillUnmount() {
