@@ -6,7 +6,7 @@ class Polaroid extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: 0,
+            index: -1,
             polaroid: 'http://i0.wp.com/www.connexion-y.fr/wp-content/uploads/2015/10/logo-Digital-CAMPUS.png?fit=300%2C300',
             }
     }
