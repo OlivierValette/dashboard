@@ -1,8 +1,9 @@
-.item{
+.item {
     align-items: center;
     border-radius: 2px;
     color: white;
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
     font-weight: 600;
     height: 100%;
@@ -16,4 +17,12 @@
 .item.youtube { background:#b31217; }
 .item.twitter { background:#00a5e5; }
 .item.linkedin { background: #0077b5; }
+.item.github { background: #3C4146; }
+
+.item .count {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
 

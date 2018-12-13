@@ -10,10 +10,12 @@ class Counters extends Component {
             // Defaults
             index: 0,
             socialMedium: this.props.socialMedia[0],
+            count: 0,
         }
     }
 
     componentDidMount() {
+        // Toggle between social media every 5s
         this.timer = setInterval(() => {
             this.props.animate().then(() => {
                 const index = (this.state.index >= this.props.socialMedia.length - 1) ? 0 : this.state.index + 1;
@@ -22,38 +24,41 @@ class Counters extends Component {
                     socialMedium: this.props.socialMedia[index],
                 })
             })
-        }, 5000);
+        }, 2000);
+
+        // Update counters every minute
+        this.counterTimer = setInterval(() => {
+            // First test with Github
+            if (this.state.socialMedium.name === 'github') {
+                if (this.state.socialMedium.key.name !== '' && this.state.socialMedium.key.value !== '') {
+                    let url = this.state.socialMedium.api_url+
+                        '/?'+this.state.socialMedium.key.name+'='+this.state.socialMedium.key.value;
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.props.animate().then(() => {
+                                this.setState({count: parseInt(data.followers)});
+                            })
+                        });
+                }
+            }
+        }, 60000);
     }
 
     componentWillUnmount() {
         clearInterval(this.timer);
+        clearInterval(this.counterTimer);
     }
 
     render() {
-    /*
-        if (this.state.socialMedium.key.name !== '' && this.state.socialMedium.key.value !== '') {
-            let url = this.state.socialMedium.api_url;
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    this.props.animate().then(() => {
-                        const dog = data[0];
-                        this.setState({dog: dog});
-                    })
-            });
-        }
-    */
+
         return (
             <div className={"item " + this.state.socialMedium.name}>
-                <span className="count">
-                    Follow us on {this.state.socialMedium.name}
-                </span>
-                <p className="">
-                    <i className={"fab " + this.state.socialMedium.logo + " fa-3x"}></i>
-                </p>
-                <span className="count">
-                    {this.state.socialMedium.user}
-                </span>
+                <p>Follow us on {this.state.socialMedium.name}</p>
+                <p><i className={"fab " + this.state.socialMedium.logo + " fa-6x"}></i></p>
+                <p>{this.state.socialMedium.user}</p>
+                <p className="count">{this.state.count}</p>
+                <p>{this.state.socialMedium.counter}</p>
             </div>
         );
     }

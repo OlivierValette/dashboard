@@ -17,12 +17,12 @@ class App extends Component {
         <Widget size='big'>
             <Dog/>
         </Widget>
-        <Widget>
+        <Widget size={'tall'}>
             <Counters socialMedia={[
                                     {
                                         name: "twitter",
                                         logo: "fa-twitter",
-                                        Counter: "Followers",
+                                        counter: "Followers",
                                         user: '@DC_Rennes',
                                         api_url: '',
                                         key: {
@@ -33,7 +33,7 @@ class App extends Component {
                                     {
                                         name: "facebook",
                                         logo: "fa-facebook",
-                                        Counter: "Likes",
+                                        counter: "Likes",
                                         user: 'Digital-Campus-Rennes',
                                         api_url: '',
                                         key: {
@@ -44,7 +44,7 @@ class App extends Component {
                                     {
                                         name: "instagram",
                                         logo: "fa-instagram",
-                                        Counter: "Followers",
+                                        counter: "Followers",
                                         user: 'digital_campus_rennes',
                                         api_url: '',
                                         key: {
@@ -55,7 +55,7 @@ class App extends Component {
                                     {
                                         name: "linkedin",
                                         logo: "fa-linkedin",
-                                        Counter: "Connections",
+                                        counter: "Connections",
                                         user: 'Digital Campus',
                                         api_url: '',
                                         key: {
@@ -66,7 +66,7 @@ class App extends Component {
                                     {
                                         name: "youtube",
                                         logo: "fa-youtube",
-                                        Counter: "Subscribers",
+                                        counter: "Subscribers",
                                         user: 'DigitalCampusWeb',
                                         api_url: '',
                                         key: {
@@ -77,12 +77,12 @@ class App extends Component {
                                     {
                                         name: "github",
                                         logo: "fa-github",
-                                        Counter: "Followers",
+                                        counter: "Followers",
                                         user: 'digital-campus-rennes',
-                                        api_url: '',
+                                        api_url: 'https://api.github.com',
                                         key: {
-                                            name: '',
-                                            value: ''
+                                            name: 'access_token',
+                                            value: 'none',
                                         },
                                     },
                                     ]}
