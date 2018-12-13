@@ -14,10 +14,10 @@ class Color extends Component {
     componentDidMount() {
         this.timer = setInterval(() => {
             this.props.animate().then(() => {
-                const index = (this.state.index > this.props.colors.length - 1) ? 0 : this.state.index + 1;
+                const index = (this.state.index >= this.props.colors.length - 1) ? 0 : this.state.index + 1;
                 this.setState({
+                    index: index,
                     color: this.props.colors[index],
-                    index: index
                 })
             })
         }, 3000);
@@ -29,7 +29,7 @@ class Color extends Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: this.state.color }} className={Color}>
+            <div style={{ backgroundColor: this.state.color }} className="Color">
                 Color
             </div>
         );
