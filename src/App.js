@@ -7,9 +7,9 @@ import Color from "./widgets/Color";
 class App extends Component {
   render() {
     return (
-      <Dashboard row={4} col={3} gutter={10} animationClassIn='animated flipInX' animationClassOut='animated flipOutX'>
+      <Dashboard row={4} col={3} gutter={10} animationClassIn='animated fadeInDownBig' animationClassOut='animated bounceOut'>
         <Widget size='large'>
-          <Color colors={['red', 'blue', 'green', 'orange']}/>
+          <Color colors={['red', 'blue', 'green', 'orange', 'purple', 'gray']}/>
         </Widget>
       </Dashboard>
     );
