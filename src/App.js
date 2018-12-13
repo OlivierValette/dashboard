@@ -26,7 +26,7 @@ class App extends Component {
                                         user: '@DC_Rennes',
                                         api_url: '',
                                         key: {
-                                            name: '',
+                                            name: 'access_token',
                                             value: ''
                                         },
                                     },
@@ -37,7 +37,7 @@ class App extends Component {
                                         user: 'Digital-Campus-Rennes',
                                         api_url: '',
                                         key: {
-                                            name: 'token',
+                                            name: 'access_token',
                                             value: '',
                                         },
                                     },
@@ -48,7 +48,7 @@ class App extends Component {
                                         user: 'digital_campus_rennes',
                                         api_url: '',
                                         key: {
-                                            name: 'token',
+                                            name: 'acces_token',
                                             value: '',
                                         },
                                     },
@@ -82,7 +82,7 @@ class App extends Component {
                                         api_url: 'https://api.github.com',
                                         key: {
                                             name: 'access_token',
-                                            value: 'none',
+                                            value: '',
                                         },
                                     },
                                     ]}

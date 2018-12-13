@@ -1,3 +1,8 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .item {
     align-items: center;
     border-radius: 2px;
@@ -7,7 +12,7 @@
     font-size: 14px;
     font-weight: 600;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1px;
     text-align: center;
     width: 100%;
@@ -20,7 +25,8 @@
 .item.github { background: #3C4146; }
 
 .item .count {
-    font-size: 32px;
+    float: 1;
+    font-size: 24px;
     font-weight: 700;
 }
 
