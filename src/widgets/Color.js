@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import colorcss from './Color.css';
+import './Color.css';
 
 class Color extends Component {
 
@@ -30,7 +30,6 @@ class Color extends Component {
     render() {
         return (
             <div style={{ backgroundColor: this.state.color }} className="Color">
-                Color
             </div>
         );
     }
